@@ -5,6 +5,7 @@ const listasDeIngGas = document.querySelector(".listas");
 const valorDelPresupuesto = document.querySelector(".presupuesto_valor");
 const ingresosValor = document.querySelector(".valor-ingresos");
 const gastosValor = document.querySelector(".valor-gastos");
+const deleteAllBtn = document.querySelector(".delete-all");
 
 let ingresos = JSON.parse(localStorage.getItem("ingresos")) || [];
 let gastos = JSON.parse(localStorage.getItem("gastos")) || [];
@@ -106,12 +107,26 @@ const renderPresupuesto = () => {
   valorDelPresupuesto.textContent = `$${valorAcPres}`;
   ingresosValor.textContent = `Ingresos totales: $${valorTotalIngresos}`;
   gastosValor.textContent = `Gastos totales: $${valorTotalGastos}`;
-/*
+  /*
   console.log(
     "El presupuesto es de:",
     diferenciaEntreNum(sumarELtOTAL(ingresos), sumarELtOTAL(gastos))
   );
   */
+};
+
+const deleteAll = (e) => {
+  e.preventDefault();
+  if (confirm("¿Deseas borrar todo?")) {
+    ingresos = [];
+    gastos = [];
+    setGastosLocalStorage();
+    setIngresosLocalStorage();
+   
+    renderPresupuesto();
+  }
+  renderToHtmlIngresos(ingresos);
+  renderToHtmlGastos(gastos);
 };
 
 function init() {
@@ -124,6 +139,7 @@ function init() {
   listasDeIngGas.addEventListener("click", restarCantidad);
   listasDeIngGas.addEventListener("click", sumaCantidadGastos);
   listasDeIngGas.addEventListener("click", restarCantidadGastos);
+  deleteAllBtn.addEventListener("click", deleteAll);
 }
 
 init();
