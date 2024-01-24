@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  list-style-type: none;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Establece el alto mínimo de la vista al 100% de la altura de la ventana */
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0px;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 15px 0px;
+  gap: 10px;
+  flex-grow: 1;
+}
+footer{
+  background-color: #131415;
+  text-align: center;
+  padding: 5px;
+  color: white;
+  font-size: 10px;
+  margin-top: auto;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#radios_btn {
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.listas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  margin: 15px 0px;
+}
+.nombreNecesario {
+  color: red;
+  font-size: 13px;
+  margin-top: 0px;
+}
+.disabled {
+  display: none;
+}
+
+.error {
+  border: solid red 1px;
+}
+
+.small-radio {
+  color: red;
+  text-align: center;
+}
+.presupuesto_valor{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+}
+#productoTextId,
+#productoPrecioId {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+#radios_btn {
+  padding: 5px;
+  border-radius: 8px;
+}
+.li-items_Ing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 30px;
+  max-height: fit-content;
+  width: 250px;
+  background-color: rgb(114, 242, 163);
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+}
+.li-items_Gas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 30px;
+  max-height: fit-content;
+  width: 250px;
+  background-color: rgb(242, 81, 81);
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+}
+.span-li_Gas,
+.span-li_Ing {
+  padding: 3px;
+  background-color: beige;
+  border-radius: 5px;
+  margin: 3px;
+}
+.sumaYRestaBtn {
+  display: flex;
+  /*background-color: rgb(180, 180, 246);*/
+  /*max-width: 40px;*/
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.sumar-cantidad,
+.restar-cantidad {
+  padding: 3px;
+  background-color: beige;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  margin: 0 5px;
+}
+.nombreYPrecio {
+  display: flex;
+  flex-direction: column;
+}
+.nombreYPrecio p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 100px;
+  /*background-color: greenyellow;*/
+}
+#cantidadValor {
+  margin: 0px 2px;
+}
+.suma-y-resta-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  min-width: 50px;
+  /*background-color: rgb(241, 196, 100);*/
+}
+.suma-y-resta-btns p {
+  width: 13px;
+}

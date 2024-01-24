@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>App de gastos Remaster</h1>
+    </header>
+    <main>
+      <div class="presupuesto">
+        <h2>Presupuesto actual:</h2>
+        <p class="presupuesto_valor">$0</p>
+      </div>
+      <div>
+        <form class="form_">
+          <div id="productoTextId">
+            <p>Producto:</p>
+            <input class="input_producto" type="text" name="" id="" />
+            <small></small>
+          </div>
+          <div id="productoPrecioId">
+            <p>Precio:</p>
+            <input class="input_precio" type="number" name="" id="" />
+            <small></small>
+          </div>
+          <!-- agregar un select o un input radio para seleccionar una sola opcion 
+          válida: ingreso o gasto -->
+          <!-- 
+          <select name="type" id="type" required>
+            <option value="Ingreso">Ingreso</option>
+            <option value="Gasto">Gasto</option>
+          </select>
+          -->
+          <p>Tipo:</p>
+          <div id="radios_btn">
+            <label>
+              <input
+                class="inputs_radio"
+                type="radio"
+                name="ingreso_egreso"
+                value="Ingreso"
+                required
+              />
+              Ingreso
+            </label>
+            <label>
+              <input
+                class="inputs_radio"
+                type="radio"
+                name="ingreso_egreso"
+                value="Gasto"
+                required
+              />
+              Gasto
+            </label>
+          </div>
+          <small class="small-radio"></small>
+
+          <!--botón para guardar el resultado -->
+
+          <button class="form_btn" type="submit">Agregar</button>
+        </form>
+        <div class="listas">
+          <div class="ingresos">
+            <h4 class="valor-ingresos">Ingresos: $0</h4>
+            <ul class="ul-ingresos">
+              <li>Esperando ingreso</li>
+            </ul>
+          </div>
+          <div class="gastos">
+            <h4 class="valor-gastos">Gastos: $0</h4>
+            <ul class="ul-gastos">
+              <li>Esperando gasto</li>
+              <li class="li-items_Gas">
+                <div class="nombreYPrecio">
+                  <p>${nombre}</p>
+                  <p>$${precio}</p>
+                </div>
+                <div class="sumaYRestaBtn">
+                  <div class="suma-y-resta-btns">
+                    <span class="restar-cantidad" item-id="${id}">-</span>
+                    <p id="cantidadValor">${cantidad}</p>
+                    <span class="sumar-cantidad" item-id="${id}">+</span>
+                  </div>
+
+                  <span class="span-li_Gas" item-id="${id}">X</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button type="button">Borrar Todo</button>
+    </main>
+    <footer> Hecho con <3 por pedromarquezdev@gmail.com</footer>
+
+    <script src="utils.js"></script>
+    <script src="validation.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
