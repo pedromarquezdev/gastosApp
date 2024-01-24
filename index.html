@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1>App de gastos Remaster</h1>
+      <h1>App de gastos</h1>
     </header>
     <main>
       <div class="presupuesto">
@@ -27,15 +27,8 @@
             <input class="input_precio" type="number" name="" id="" />
             <small></small>
           </div>
-          <!-- agregar un select o un input radio para seleccionar una sola opcion 
-          válida: ingreso o gasto -->
-          <!-- 
-          <select name="type" id="type" required>
-            <option value="Ingreso">Ingreso</option>
-            <option value="Gasto">Gasto</option>
-          </select>
-          -->
-          <p>Tipo:</p>
+
+          <p class="tipo">Tipo:</p>
           <div id="radios_btn">
             <label>
               <input
@@ -60,8 +53,6 @@
           </div>
           <small class="small-radio"></small>
 
-          <!--botón para guardar el resultado -->
-
           <button class="form_btn" type="submit">Agregar</button>
         </form>
         <div class="listas">
@@ -75,28 +66,15 @@
             <h4 class="valor-gastos">Gastos: $0</h4>
             <ul class="ul-gastos">
               <li>Esperando gasto</li>
-              <li class="li-items_Gas">
-                <div class="nombreYPrecio">
-                  <p>${nombre}</p>
-                  <p>$${precio}</p>
-                </div>
-                <div class="sumaYRestaBtn">
-                  <div class="suma-y-resta-btns">
-                    <span class="restar-cantidad" item-id="${id}">-</span>
-                    <p id="cantidadValor">${cantidad}</p>
-                    <span class="sumar-cantidad" item-id="${id}">+</span>
-                  </div>
-
-                  <span class="span-li_Gas" item-id="${id}">X</span>
-                </div>
-              </li>
             </ul>
           </div>
         </div>
       </div>
       <button class="delete-all" type="button">Borrar Todo</button>
+      
     </main>
-    <footer> Hecho con <3 por pedromarquezdev@gmail.com</footer>
+    
+    <footer>Hecho con <3 por pedromarquezdev@gmail.com</footer>
 
     <script src="utils.js"></script>
     <script src="validation.js"></script>

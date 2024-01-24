@@ -26,20 +26,37 @@ const clearError = (input) => {
 };
 
 const productsToHtmlIngresos = ({ nombre, precio, tipo, id, cantidad }) => {
-  return `<li class="li-items_Ing"> <div class="nombreYPrecio"> <p>${nombre}</p> <p>$${precio} </p>  </div><div class="sumaYRestaBtn" > <div class="suma-y-resta-btns">  <span class="restar-cantidad" item-id="${id}">-</span> <p id="cantidadValor">${cantidad}</p><span class="sumar-cantidad" item-id="${id}">+</span> </div> <span class="span-li_Ing" item-id="${id}" >X</span> </div></li>
+  return `<li class="li-items_Ing"> 
+  <div class="nombreYPrecio"> <p class="nombre-producto"  >${nombre}</p> <p>$${precio} </p>  </div>
+  <div class="sumaYRestaBtn" > 
+  <div class="suma-y-resta-btns">  
+  <img id="boton-restar" src="./assets/boton-menos.png" class="restar-cantidad" item-id="${id}" img> 
+  <p id="cantidadValor">${cantidad}</p>
+  <img id="btn-mas-png" src="./assets/mas.png" class="sumar-cantidad" item-id="${id}" img> 
+  </div> 
+  <img id="btn-eliminar-png" class="span-li_Ing" item-id="${id}"  src="./assets/eliminar.png"   alt=""> 
+  </div></li>
     
   `;
 };
 // ejemplo de como estaban los botones antes con el botón de eliminar
 /*
 const productsToHtmlIngresos = ({ nombre, precio, tipo, id, cantidad }) => {
-  return `<li class="li-items_Ing">${nombre} $${precio} <span class="restar-cantidad" item-id="${id}">-</span> ${cantidad}<span class="sumar-cantidad" item-id="${id}">+</span>  <span class="span-li_Ing" item-id="${id}" >X</span></li>
+  return `<li class="li-items_Ing">${nombre} $${precio} <span class="restar-cantidad" item-id="${id}">-</span> 
+  ${cantidad}<span class="sumar-cantidad" item-id="${id}">+</span>  
+  <span class="span-li_Ing" item-id="${id}" >X</span></li>
     
   `;
 };  
 */
 const productsToHtmlGastos = ({ nombre, precio, tipo, id, cantidad }) => {
-  return `<li class="li-items_Gas"> <div class="nombreYPrecio"><p>${nombre}</p>  <p>$${precio} </p></div >  <div class="sumaYRestaBtn" > <div class="suma-y-resta-btns">  <span class="restar-cantidad" item-id="${id}">-</span> <p id="cantidadValor">${cantidad}</p>  <span class="sumar-cantidad" item-id="${id}">+</span></div><span class="span-li_Gas" item-id="${id}" >X</span>  </div> </li>
+  return `    <li class="li-items_Gas"> <div class="nombreYPrecio"><p class="nombre-producto" >${nombre}</p>  <p>$${precio} </p></div > 
+   <div class="sumaYRestaBtn" > <div class="suma-y-resta-btns"> 
+   <img id="boton-restar" src="./assets/boton-menos.png" class="restar-cantidad" item-id="${id}" img> 
+   <p id="cantidadValor">${cantidad}</p>  
+  <img id="btn-mas-png" src="./assets/mas.png" class="sumar-cantidad" item-id="${id}" img>
+  </div> 
+  <img id="btn-eliminar-png" class="span-li_Gas" item-id="${id}"  src="./assets/eliminar.png"  alt="">   </div> </li>
     
   `;
 };
