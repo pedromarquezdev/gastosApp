@@ -30,9 +30,9 @@ const productsToHtmlIngresos = ({ nombre, precio, tipo, id, cantidad }) => {
   <div class="nombreYPrecio"> <p class="nombre-producto"  >${nombre}</p> <p>$${precio} </p>  </div>
   <div class="sumaYRestaBtn" > 
   <div class="suma-y-resta-btns">  
-  <img id="boton-restar" src="./assets/boton-menos.png" class="restar-cantidad" item-id="${id}" img> 
+  <img id="boton-restar" src="./assets/boton-menos.png" class="restar-cantidad" item-id="${id}" > 
   <p id="cantidadValor">${cantidad}</p>
-  <img id="btn-mas-png" src="./assets/mas.png" class="sumar-cantidad" item-id="${id}" img> 
+  <img id="btn-mas-png" src="./assets/mas.png" class="sumar-cantidad" item-id="${id}" > 
   </div> 
   <img id="btn-eliminar-png" class="span-li_Ing" item-id="${id}"  src="./assets/eliminar.png"   alt=""> 
   </div></li>
@@ -52,9 +52,9 @@ const productsToHtmlIngresos = ({ nombre, precio, tipo, id, cantidad }) => {
 const productsToHtmlGastos = ({ nombre, precio, tipo, id, cantidad }) => {
   return `    <li class="li-items_Gas"> <div class="nombreYPrecio"><p class="nombre-producto" >${nombre}</p>  <p>$${precio} </p></div > 
    <div class="sumaYRestaBtn" > <div class="suma-y-resta-btns"> 
-   <img id="boton-restar" src="./assets/boton-menos.png" class="restar-cantidad" item-id="${id}" img> 
+   <img id="boton-restar" src="./assets/boton-menos.png" class="restar-cantidad" item-id="${id}" > 
    <p id="cantidadValor">${cantidad}</p>  
-  <img id="btn-mas-png" src="./assets/mas.png" class="sumar-cantidad" item-id="${id}" img>
+  <img id="btn-mas-png" src="./assets/mas.png" class="sumar-cantidad" item-id="${id}" >
   </div> 
   <img id="btn-eliminar-png" class="span-li_Gas" item-id="${id}"  src="./assets/eliminar.png"  alt="">   </div> </li>
     
