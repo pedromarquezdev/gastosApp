@@ -117,6 +117,9 @@ const renderPresupuesto = () => {
 
 const deleteAll = (e) => {
   e.preventDefault();
+  if(ingresos.length === 0 && gastos.length === 0){
+    return;
+  }
   if (confirm("¿Deseas borrar todo?")) {
     ingresos = [];
     gastos = [];
