@@ -20,7 +20,7 @@ header {
   justify-content: center;
   padding: 10px;
 }
-header h1{
+header h1 {
   text-align: center;
 }
 main {
@@ -33,12 +33,16 @@ main {
   margin-bottom: 15px;
 }
 footer {
+  display: flex;
   background-color: #131415;
+  text-align: center;
+  justify-content: center;
   text-align: center;
   padding: 5px;
   color: white;
   font-size: 10px;
   margin-top: auto;
+  font-size: 13px;
 }
 body,
 header,
@@ -110,10 +114,11 @@ form {
   font-size: 18px;
   font-weight: 400;
 }
-.nombre-producto{
+.nombre-producto {
   font-weight: 600;
 }
-.valor-ingresos, .valor-gastos{
+.valor-ingresos,
+.valor-gastos {
   text-align: center;
 }
 
@@ -127,7 +132,7 @@ form {
   justify-content: space-between;
   min-height: 30px;
   max-height: fit-content;
-  width: 250px;
+  width: 280px;
   background-color: rgb(114, 242, 163);
   border-radius: 8px;
   padding: 5px;
@@ -139,7 +144,7 @@ form {
   justify-content: space-between;
   min-height: 30px;
   max-height: fit-content;
-  width: 250px;
+  width: 280px;
   background-color: rgb(242, 81, 81);
   border-radius: 8px;
   padding: 5px;
@@ -148,17 +153,9 @@ form {
 .span-li_Gas,
 .span-li_Ing {
   cursor: pointer;
-  /* padding: 1px;
- 
- background-color: beige; 
-  border-radius: 5px;
-  margin: 3px;
-  */
 }
 .sumaYRestaBtn {
   display: flex;
-  /*background-color: rgb(180, 180, 246);*/
-  /*max-width: 40px;*/
   align-items: center;
   justify-content: space-between;
   gap: 25px;
@@ -215,4 +212,36 @@ form {
   background-color: white;
   padding: 0px;
   border-radius: 50px;
+}
+.love {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+}
+
+
+/* Estilo para tablet */
+
+@media only screen and (max-width: 768px) {
+  
+  footer{
+    font-size: 10px;
+  }
+  .love {
+    height: 10px;
+    width: 10px;
+  }
+}
+
+/* Estilo para celular */
+
+@media only screen and (max-width: 480px) {
+  
+  footer{
+    font-size: 10px;
+  }
+  .love {
+    height: 10px;
+    width: 10px;
+  }
 }

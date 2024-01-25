@@ -7,9 +7,12 @@ const ingresosValor = document.querySelector(".valor-ingresos");
 const gastosValor = document.querySelector(".valor-gastos");
 const deleteAllBtn = document.querySelector(".delete-all");
 
+//array de ingresos
 let ingresos = JSON.parse(localStorage.getItem("ingresos")) || [];
+//array de gastos
 let gastos = JSON.parse(localStorage.getItem("gastos")) || [];
 
+//función para añadir un item.
 const addFunction = (e) => {
   e.preventDefault();
   const productoValue = inputProducto.value;
@@ -28,7 +31,8 @@ const addFunction = (e) => {
     id: Date.now(),
     cantidad: 1,
   };
-
+  //función que evalúa si el item va a un array o al otro
+  //dependiendeo de si es de tipo ingreso o gasto
   const guardarIngYGas = () => {
     if (newObj.tipo === "Ingreso") {
       ingresos = [...ingresos, newObj];
@@ -42,12 +46,13 @@ const addFunction = (e) => {
     return;
   };
 
+  //guardado, renderizado y reseteo del form
   guardarIngYGas();
   renderPresupuesto();
-
   form.reset();
 };
 
+//función que permite sumar el total de los items de un array
 const sumarELtOTAL = (array) => {
   let total = 0;
   array.forEach((item) => {
@@ -57,10 +62,10 @@ const sumarELtOTAL = (array) => {
   // console.log("El total es:", total);
   return total;
 };
-
+//función para guardar los item en en LS 
 const setIngresosLocalStorage = () =>
   localStorage.setItem("ingresos", JSON.stringify(ingresos));
-
+//función para guardar los item en en LS 
 const setGastosLocalStorage = () =>
   localStorage.setItem("gastos", JSON.stringify(gastos));
 
@@ -91,11 +96,12 @@ const deleteIng = (e) => {
 
   return;
 };
-
+//función para obtener la diferencia entre un valor y otro
 const diferenciaEntreNum = (a, b) => {
   return a - b;
 };
 
+//función para renderizar el presupuesto
 const renderPresupuesto = () => {
   let valorAcPres = diferenciaEntreNum(
     sumarELtOTAL(ingresos),
@@ -107,17 +113,11 @@ const renderPresupuesto = () => {
   valorDelPresupuesto.textContent = `$${valorAcPres}`;
   ingresosValor.textContent = `Ingresos totales: $${valorTotalIngresos}`;
   gastosValor.textContent = `Gastos totales: $${valorTotalGastos}`;
-  /*
-  console.log(
-    "El presupuesto es de:",
-    diferenciaEntreNum(sumarELtOTAL(ingresos), sumarELtOTAL(gastos))
-  );
-  */
 };
-
+//función para borrar todos los items
 const deleteAll = (e) => {
   e.preventDefault();
-  if(ingresos.length === 0 && gastos.length === 0){
+  if (ingresos.length === 0 && gastos.length === 0) {
     return;
   }
   if (confirm("¿Deseas borrar todo?")) {
@@ -125,7 +125,7 @@ const deleteAll = (e) => {
     gastos = [];
     setGastosLocalStorage();
     setIngresosLocalStorage();
-   
+
     renderPresupuesto();
   }
   renderToHtmlIngresos(ingresos);

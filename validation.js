@@ -6,6 +6,7 @@ const spanDeTexto = document.querySelector(".spanDeTexto");
 const radioSmall = document.querySelector(".small-radio");
 const fatherRadio = document.querySelector("#radios_btn")
 
+//función para evaluar si el input es válido o no
 const checkTextInput = () => {
   let isvalid = false;
 
@@ -22,7 +23,7 @@ const checkTextInput = () => {
 
   return isvalid;
 };
-
+//función para evaluar si el input es válido o no
 const checkPrice = () => {
   let isValid = false;
 
@@ -39,7 +40,7 @@ const checkPrice = () => {
 
   return isValid;
 };
-
+//función para evaluar si el input es válido o no
 const validarInputRadio = () => {
   let isValid = false;
   if (conteinerRadio() === undefined) {
@@ -56,6 +57,7 @@ const validarInputRadio = () => {
   return isValid;
 };
 
+//función que retorna el valor del input 0 o 1
 const conteinerRadio = () => {
   let inputValue;
 
