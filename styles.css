@@ -170,11 +170,13 @@ form {
 .nombreYPrecio {
   display: flex;
   flex-direction: column;
+  
 }
 .nombreYPrecio p {
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  /*text-overflow: ellipsis;*/
+  overflow-wrap: break-word;
+  white-space: wrap;
   min-width: 100px;
   /*background-color: greenyellow;*/
 }
